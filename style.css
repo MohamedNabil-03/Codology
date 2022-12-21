@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "system-ui", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+}
+/*-----
+   header  
+  -----*/
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 4px 0;
+  background-color: #232f3e;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+}
+header ul li a {
+  position: relative;
+  color: white;
+  margin: 0 15px;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+header ul li a:hover {
+  opacity: 1;
+}
+header a.header-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  color: #fff;
+}
+header a.header-logo h1 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 610;
+  position: relative;
+  bottom: 2px;
+  user-select: none;
+}
+.menutoggle {
+  display: none;
+}
+/*-------
+   root
+  --------*/
+section {
+  /* background-color: #f7f7f7; */
+  background-color: #eeeeeea6;
+  min-height: fit-content;
+  margin-top: 35px;
+  padding: 12px 35px;
+}
+div.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+h2 {
+  /* border-bottom: 4px solid rgb(255, 5, 55, 0.8); */
+  border-bottom: 4px solid crimson;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  cursor: default;
+}
+/*-----
+   welcome section
+  -----*/
+section.welcome-section {
+  border: crimson 2px solid;
+  border-left: crimson 15px solid;
+  width: 85%;
+  margin: auto;
+  margin-top: 35px;
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+}
+section.welcome-section h3 {
+  font-size: 23px;
+  cursor: default;
+}
+section.welcome-section p {
+  font-size: 18px;
+}
+@media (max-width: 870px) {
+  section.welcome-section {
+    padding: 8px;
+    width: 95%;
+    margin-top: 15px;
+    border-left: crimson 10px solid;
+  }
+  section.welcome-section p {
+    font-size: 16px;
+  }
+  section.why-learn-from-our-website {
+    margin-top: 15px;
+  }
+}
+/*--------------------
+   section - why learn from our website
+  ---------------------*/
+div.features {
+  text-align: center;
+  align-items: center;
+  width: 23%;
+  margin-top: 15px;
+  padding: 5px;
+}
+div.features img {
+  width: 95px;
+  height: 95px;
+}
+div.features p {
+  font-size: 17px;
+}
+@media (max-width: 870px) {
+  div.features {
+    width: fit-content;
+  }
+}
+/*--------------
+   section - tracks
+  ---------------*/
+section.tracks-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  min-height: 400px;
+  background: none;
+}
+section.tracks-container article h3 {
+  border-bottom: 3px solid crimson;
+  width: fit-content;
+  cursor: default;
+}
+article.web-development h3 {
+  position: relative;
+  right: 5px;
+}
+div.track-card {
+  margin-top: 35px;
+  text-align: center;
+  align-items: center;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #dadada;
+  border-radius: 12px;
+}
+div.track-card a {
+  color: black;
+}
+div.track-card a img {
+  width: 85px;
+  height: 85px;
+}
+@media (max-width: 870px) {
+  article h3 {
+    margin-top: 30px;
+  }
+}
+/*--------------------
+   section - programming faq
+  ---------------------*/
+ol {
+  margin-top: 10px;
+}
+ol li {
+  padding: 10px;
+  font-size: 18px;
+}
+ol li span {
+  padding: 0 11px;
+  border-radius: 9px;
+  color: white;
+  background-color: crimson;
+  margin: 2px 6px;
+  font-size: 16px;
+  cursor: default;
+  user-select: none;
+}
+ol li a {
+  color: #0075ff;
+  font-weight: 605;
+  padding: 5px 0;
+}
+@media (max-width: 870px) {
+  ol {
+    position: relative;
+    left: 15px;
+  }
+  ol li span {
+    margin: 2px 0 2px 4px;
+    font-size: 12px;
+  }
+  ol li {
+    font-size: 15px;
+    font-weight: 550;
+    padding: 3px 0;
+    margin: 0;
+  }
+}
+/*--------------------
+   section - programming languages courses
+  ---------------------*/
+div.programming-language {
+  margin-top: 30px;
+}
+div.programming-language a p {
+  color: #0075ff;
+  font-size: 19px;
+  font-weight: 605;
+  padding: 5px 0;
+}
+/*--------
+   footer
+---------*/
+footer {
+  margin-top: 35px;
+  padding: 12px 70px;
+  background-color: #232f3e;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 100%;
+}
+footer p.copyright {
+  cursor: default;
+  user-select: none;
+}
+footer p a.my-name {
+  color: #fff;
+}
+p.copyright i.fa-heart {
+  color: crimson;
+}
+/*--------------
+ scroll to top button  
+---------------*/
+/* .scroll-to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+}
+.scroll-to-top-button a {
+  height: 39px;
+  width: 37px;
+  text-align: center;
+  background: #232f3e;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.scroll-to-top-button a i {
+  color: #fff;
+  line-height: 39px;
+  font-size: 25px;
+  cursor: pointer;
+} */
+/*--------
+   menu Toggle
+---------*/
+@media (max-width: 870px) {
+  header {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .menutoggle {
+    display: flex;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    right: 20px;
+  }
+  header .header-logo {
+    position: relative;
+    left: 20px;
+  }
+  header .navigation.active {
+    display: flex;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #232f3e;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    animation: slide 0.2s ease;
+    user-select: none;
+    z-index: 999;
+  }
+  header .navigation li {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  * {
+    cursor: default;
+  }
+}

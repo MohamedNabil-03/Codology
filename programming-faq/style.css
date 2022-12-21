@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "system-ui", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+}
+/*-----
+   header  
+  -----*/
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 4px 0;
+  /* background-color: rgb(35, 35, 35); */
+  /* background-color: #3e474f; */
+  background-color: #232f3e;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+}
+header ul li a {
+  position: relative;
+  color: white;
+  margin: 0 15px;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+header ul li a:hover {
+  opacity: 1;
+}
+header a.header-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  color: #fff;
+}
+header a.header-logo h1 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 610;
+  position: relative;
+  bottom: 2px;
+  user-select: none;
+}
+.menutoggle {
+  display: none;
+}
+/*---------------- 
+section - container 
+------------------*/
+section.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/*---------------- 
+main - content area 
+------------------*/
+main {
+  border: 1px solid #adadad;
+  width: 70%;
+  margin: 40px 15px 0 0;
+  padding: 10px;
+  float: left;
+}
+main h1 {
+  border-bottom: #adadad 2px solid;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+main h3,
+main p {
+  margin-top: 5px;
+}
+main h3,
+main h1 {
+  color: #0075ff;
+}
+main p {
+  margin-right: 5px;
+}
+h6 {
+  color: crimson;
+  font-size: 17px;
+  margin-right: 5px;
+}
+h6.inline-block {
+  display: inline-block;
+}
+a.link {
+  background-color: crimson;
+  padding: 0 8px;
+  color: white;
+  margin: 1px;
+  border-radius: 8px;
+}
+a.link:hover {
+  font-size: 17px;
+}
+/*---------------- 
+aside - the nav bar 
+------------------*/
+aside {
+  border: 1px solid #adadad;
+  margin: 40px 0 0 15px;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  float: right;
+  height: fit-content;
+}
+aside div {
+  border: 1px solid #adadad;
+  padding: 20px;
+  padding-top: 10px;
+}
+aside div a {
+  color: white;
+  padding: 2px 13px;
+  background-color: crimson;
+  margin: 7px;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+aside div a:hover {
+  background-color: rgb(196, 13, 49);
+}
+h5 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+aside .programming-tracks {
+  margin-top: 15px;
+}
+aside .programming-tracks ul li {
+  margin: 15px 0;
+}
+div.aside-social {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+/*---------------- 
+responsive design
+------------------*/
+@media screen and (max-width: 1140px) {
+  aside,
+  main {
+    float: none;
+    width: 90%;
+    margin: auto;
+    padding: auto;
+    margin: 15px;
+  }
+  aside {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  div.aside-social {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  div.programming-tracks ul li a {
+    font-size: 14px;
+    margin: auto;
+  }
+}
+/*--------
+   footer
+---------*/
+footer {
+  margin-top: 35px;
+  padding: 12px 70px;
+  background-color: #232f3e;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 100%;
+}
+footer p.copyright {
+  cursor: default;
+  user-select: none;
+}
+footer p a.my-name {
+  color: #fff;
+}
+p.copyright i.fa-heart {
+  color: crimson;
+}
+/*--------
+   menu Toggle
+---------*/
+@media (max-width: 870px) {
+  header {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .menutoggle {
+    display: flex;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    right: 20px;
+  }
+  header .header-logo {
+    position: relative;
+    left: 20px;
+  }
+  header .navigation.active {
+    display: flex;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #232f3e;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    animation: slide 0.2s ease;
+    user-select: none;
+    z-index: 999;
+  }
+  header .navigation li {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  * {
+    cursor: default;
+  }
+}

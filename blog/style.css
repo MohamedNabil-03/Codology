@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "system-ui", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  background-color: #eee;
+}
+/*-----
+   header  
+  -----*/
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 4px 0;
+  /* background-color: rgb(35, 35, 35); */
+  /* background-color: #3e474f; */
+  background-color: #232f3e;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+}
+header ul li a {
+  position: relative;
+  color: white;
+  margin: 0 15px;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+header ul li a:hover {
+  opacity: 1;
+}
+header a.header-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  color: #fff;
+}
+header a.header-logo h1 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 610;
+  position: relative;
+  bottom: 2px;
+  user-select: none;
+}
+.menutoggle {
+  display: none;
+}
+/*-------
+   posts  
+---------*/
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main .col {
+  width: 48%;
+}
+.post {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px rgba(0, 0, 0, 0.5) 0 4px 6px -2px;
+  margin-top: 3rem;
+}
+.post .post-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+.post p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  opacity: 0.6;
+  text-align: justify;
+}
+.post-info {
+  padding: 1rem;
+  padding-top: 0;
+}
+.container.main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.875rem;
+  margin-top: -1.5rem;
+}
+.post-info a h2 {
+  color: #000;
+  width: fit-content;
+}
+.post-info h2:hover {
+  color: crimson;
+  border-bottom: 1px solid #000;
+}
+/*---------------- 
+responsive design 
+------------------*/
+@media (max-width: 870px) {
+  .container.main {
+      display: flex;
+      flex-direction: column;
+  }
+  .main .col {
+      width: 100%;
+  }
+}
+/*--------
+   footer
+---------*/
+footer {
+  margin-top: 35px;
+  padding: 12px 70px;
+  background-color: #232f3e;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 100%;
+}
+footer p.copyright {
+  cursor: default;
+  user-select: none;
+}
+footer p a.my-name {
+  color: #fff;
+}
+p.copyright i.fa-heart {
+  color: #d41b1b;
+}
+/*--------
+   menu Toggle
+---------*/
+@media (max-width: 870px) {
+  header {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .menutoggle {
+    display: flex;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    right: 20px;
+  }
+  header .header-logo {
+    position: relative;
+    left: 20px;
+  }
+  header .navigation.active {
+    display: flex;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #232f3e;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    animation: slide 0.2s ease;
+    user-select: none;
+  }
+  header .navigation li {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  * {
+    cursor: default;
+  }
+}

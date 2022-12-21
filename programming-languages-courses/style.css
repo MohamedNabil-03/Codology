@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", "system-ui", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+}
+/*-----
+   header  
+  -----*/
+header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding: 4px 0;
+  /* background-color: rgb(35, 35, 35); */
+  /* background-color: #3e474f; */
+  background-color: #232f3e;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+}
+header ul li a {
+  position: relative;
+  color: white;
+  margin: 0 15px;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+header ul li a:hover {
+  opacity: 1;
+}
+header a.header-logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  color: #fff;
+}
+header a.header-logo h1 {
+  font-size: 1.7rem;
+  color: white;
+  font-weight: 610;
+  position: relative;
+  bottom: 2px;
+  user-select: none;
+}
+.menutoggle {
+  display: none;
+}
+/*---------------- 
+section - container 
+------------------*/
+section.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+/*---------------- 
+main - content area 
+------------------*/
+main{
+  width: 70%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+main h1{
+  border-bottom: 2px solid #adadad;
+  width: fit-content;
+  color: #0075ff;
+}
+main p{
+  margin-right: 5px;
+}
+main h3{
+  color: crimson;
+}
+aside, main{
+  border: 1px solid #adadad;
+  padding: 10px;
+}
+/*---------------- 
+aside - the nav bar 
+------------------*/
+aside{
+  width: 25%;
+  padding: 10px;
+}
+aside h2 {
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.7;
+}
+aside p{
+  text-align: center;
+  margin: 5px 0 0 5px;
+  font-size: 15px;
+  color: crimson;
+  font-weight: 605;
+  opacity: 0.7;
+}
+aside ul li a{
+  color: #0075ff;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+aside ul li a:hover {
+  color: crimson;
+}
+/*---------------- 
+responsive design 
+------------------*/
+@media  screen and (max-width: 870px) {
+  aside, main {
+    width: 90%;
+    height: fit-content;
+  }
+  aside{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  section.container {
+    margin-top: 15px;
+  }
+  main {
+    margin-top: 15px;
+  }
+}
+/*--------
+   footer
+---------*/
+footer {
+  margin-top: 35px;
+  padding: 12px 70px;
+  background-color: #232f3e;
+  color: #fff;
+  text-align: center;
+  position: sticky;
+  top: 100%;
+}
+footer p.copyright {
+  cursor: default;
+  user-select: none;
+}
+footer p a.my-name {
+  color: #fff;
+}
+p.copyright i.fa-heart {
+  color: #d41b1b;
+}
+/*--------
+   menu Toggle
+---------*/
+@media (max-width: 870px) {
+  header {
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .navigation {
+    display: none;
+  }
+  header .menutoggle {
+    display: flex;
+    font-size: 22px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    right: 20px;
+  }
+  header .header-logo {
+    position: relative;
+    left: 20px;
+  }
+  header .navigation.active {
+    display: flex;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    background-color: #232f3e;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+    animation: slide 0.2s ease;
+    user-select: none;
+    z-index: 999;
+  }
+  header .navigation li {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  @keyframes slide {
+    0% {
+      right: -100px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+  * {
+    cursor: default;
+  }
+}

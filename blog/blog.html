@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة - Codology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+
+<body>
+    <header>
+        <a class="header-logo" href="../index.html">
+            <!-- <img src="img/logo.png" alt="programming street logo"> -->
+            <h1>Codology</h1>
+        </a>
+        <div class="menutoggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="navigation">
+            <li> <a href="../index.html#faq"> الأسئلة الشائعة </a> </li>
+            <li> <a href="../index.html#tracks"> مسارات تعلم مجالات البرمجة </a> </li>
+            <li> <a href="../index.html#courses">كورسات لغات البرمجة</a> </li>
+            <li> <a href="blog.html">المدونة و المقالات</a> </li>
+        </ul>
+    </header>
+        <div class="container main">
+            <div class="col">
+                <div class="post">
+                    <img class="post-img" src="img/post3.jpeg" alt="">
+                    <div class="post-info">
+                        <a href="content/article-1.html"><h2>عنوان المقال</h2></a>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque deleniti recusandae saepe.
+                            Error
+                            voluptas vel doloremque fugit. Quos, corporis quis suscipit ad necessitatibus, blanditiis veniam
+                            maiores non aspernatur, voluptate incidunt!
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="post">
+                    <img class="post-img" src="img/post2.jpeg" alt="">
+                    <div class="post-info">
+                        <a href="content/article-2.html"><h2>عنوان المقال</h2></a>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque deleniti recusandae saepe.
+                            Error
+                            voluptas vel doloremque fugit. Quos, corporis quis suscipit ad necessitatibus, blanditiis veniam
+                            maiores non aspernatur, voluptate incidunt!
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="col">
+                <div class="post">
+                    <img class="post-img" src="img/post4.jpg" alt="">
+                    <div class="post-info">
+                        <a href="content/article-1.html"><h2>عنوان المقال</h2></a>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque deleniti recusandae saepe.
+                            Error
+                            voluptas vel doloremque fugit. Quos, corporis quis suscipit ad necessitatibus, blanditiis veniam
+                            maiores non aspernatur, voluptate incidunt!
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="post">
+                    <img class="post-img" src="img/post1.jpeg" alt="">
+                    <div class="post-info">
+                        <a href="content/article-2.html"><h2>عنوان المقال</h2></a>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque deleniti recusandae saepe.
+                            Error
+                            voluptas vel doloremque fugit. Quos, corporis quis suscipit ad necessitatibus, blanditiis veniam
+                            maiores non aspernatur, voluptate incidunt!
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    <footer>
+        <!-- <p class="copyright">Made With <i class="fa fa-heart"></i> By <a target="_blank" class="my-name" href="">Mohamed
+                Nabil</a> - 2021</p> -->
+                <p class="copyright">جميع الحقوق محفوظة - Codology © 2022</p>
+    </footer>
+    <script>
+        const menuToggle = document.querySelector(".menutoggle");
+        const navigation = document.querySelector(".navigation");
+
+        menuToggle.addEventListener("click", function () {
+            menuToggle.classList.toggle("active");
+            navigation.classList.toggle("active");
+
+            if (menuToggle.classList.contains("active")) {
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+
+</html>
